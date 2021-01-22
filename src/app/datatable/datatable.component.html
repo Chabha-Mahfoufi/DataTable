@@ -1,0 +1,26 @@
+<div class="card m-3">
+  <h5 class="card-header">Tableau des utilisateurs</h5>
+  <div class="card-body">
+    <button class="btn btn-primary mr-1"
+        (click)="navigate()"
+        >Ajouter un nouveau utilisateur
+    </button>
+  </div>
+  <div class="card-body">
+    <ag-grid-angular
+        (DeleteUserEvent) = "refreshDataTable($event)"
+        style="width: 1600px; height: 700px"
+        class="ag-theme-alpine"
+        [rowData]="rowData "
+        [columnDefs]="columnDefs"
+        [enableCellChangeFlash]="true"
+        >
+        <!-- (gridReady)="refreshDataTable($event)"
+                (virtualRowRemoved)="refreshDataTable($event)"
+         -->
+
+    </ag-grid-angular>
+  </div>
+</div>
+
+

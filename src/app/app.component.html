@@ -1,0 +1,35 @@
+<div class="bg-dark">
+  <div class="container">
+    <div class="row">
+      <nav class="col navbar navbar-expand navbar-dark">
+        <a class="navbar-brand" routerLink="">Angular DataUsers</a>
+        <button class="navbar-toggler" type="button"
+                (click)="toggleNavbar()" data-toggle="collapse"
+                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="container-fluid">
+          <ul class="navbar-nav">
+            <li>
+              <a class="nav-link" routerLink="home" routerLinkActive="active">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li>
+              <a class="nav-link" routerLink="formular" routerLinkActive="active">Inscription</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
